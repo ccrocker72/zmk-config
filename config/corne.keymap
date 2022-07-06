@@ -58,16 +58,16 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
 // ----------------------------------CURRENT------------------------------------------
-// |  ~   |     |     |     |     |   |  7  |  8  |  9  |  +  |   BKSP         |
-// |  `   |     |     |     |     |   |  4  |  5  |  6  |  -  |   '            |
-// |      |     |     |     |     |   |  1  |  2  |  3  |  =  |   ENT (SHFT)   |
-//              | GUI |     | SPC |   | ENT |     |  0  |
+// |  ~   |     |      |     |     |   |  7  |  8  |  9  |  +  |   BKSP         |
+// |  `   |     |      |     |     |   |  4  |  5  |  6  |  -  |   '            |
+// |      |     |      |     |     |   |  1  |  2  |  3  |  =  |   ENT (SHFT)   |
+//              | CTRL |     | SPC |   | ENT |     |  0  |
 
                         bindings = <
-   &trans &kp TILDE   &trans    &trans   &trans     &trans      &kp N7   &kp N8  &kp N9 &kp PLUS   &kp BSPC        &trans
-   &trans &kp GRAVE   &trans    &trans   &trans     &trans      &kp N4   &kp N5  &kp N6 &kp MINUS  &kp SQT         &trans
-   &trans &trans      &trans    &trans   &trans     &trans      &kp N1   &kp N2  &kp N3 &kp EQUAL  &mt RSHFT RET   &trans
-                                &kp LGUI &trans     &kp SPACE   &kp RET  &trans  &kp N0
+   &trans &kp TILDE   &trans    &trans    &trans     &trans      &kp N7   &kp N8  &kp N9 &kp PLUS   &kp BSPC        &trans
+   &trans &kp GRAVE   &trans    &trans    &trans     &trans      &kp N4   &kp N5  &kp N6 &kp MINUS  &kp SQT         &trans
+   &trans &trans      &trans    &trans    &trans     &trans      &kp N1   &kp N2  &kp N3 &kp EQUAL  &mt RSHFT RET   &trans
+                                &kp LCTRL &trans     &kp SPACE   &kp RET  &trans  &kp N0
                         >;
                 };
         };
