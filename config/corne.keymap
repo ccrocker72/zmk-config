@@ -9,7 +9,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp p>, <&kp BSPC>, <&trans>;
+            bindings = <&kp p>, <&kp N2>, <&kp N3>;
         };
     };
 
