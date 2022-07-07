@@ -30,29 +30,29 @@
                 lower_layer {
 // ----------------------------------CURRENT------------------------------------------
 // |  !  |  @      |  #      |  $      |  %  |        |  ^  |  &  |  *  |  _  |  -  |
-// | ESC |  {      |  [      |  (      |     |        |     |  )  |  ]  |  }  |     |
+// | ESC |  {      |  [      |  (      | DEL |        |     |  )  |  ]  |  }  | DEL |
 // | TAB |  BT 0   |  BT 1   |  BT 2   |BTCLR|        |     |     |     |     |  \  |
-//                 |  ALT    |         | SPC |        | ENT |     | ALT |
+//                 |  GUI    |         |     |        |     |     |     |
                         bindings = <
    &trans &kp EXCL &kp AT         &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET  &kp AMPS   &kp KP_MULTIPLY &kp UNDER   &kp MINUS &trans
-   &trans &kp ESC  &kp LBRC       &kp LBKT      &kp LPAR      &trans            &trans     &kp RPAR   &kp RBKT        &kp RBRC    &trans    &trans
+   &trans &kp ESC  &kp LBRC       &kp LBKT      &kp LPAR      &kp DEL           &trans     &kp RPAR   &kp RBKT        &kp RBRC    &kp DEL   &trans
    &trans &kp TAB  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR        &trans     &trans     &trans          &trans      &kp BSLH  &trans
-                                  &kp LALT     &trans        &kp SPACE          &kp RET    &trans     &kp RALT   
+                                  &kp LGUI      &trans        &trans            &trans     &trans     &trans   
                         >;
                 };
 
                 raise_layer {
 // ----------------------------------CURRENT------------------------------------------
-// |  ~   |     |   UP |     |     |   |  7  |  8  |  9  |  +  |   BKSP         |
-// |  `   |RIGHT| DOWN | LEFT|     |   |  4  |  5  |  6  |  -  |   '            |
-// |      |     |      |     |     |   |  1  |  2  |  3  |  =  |   ENT (SHFT)   |
-//              | CTRL |     | SPC |   | ENT |     |  0  |
+// |  ~   |     |   UP |     |     |   |  7  |  8  |  9  |  +  |   BKSP    |
+// |  `   |RIGHT| DOWN | LEFT|     |   |  4  |  5  |  6  |  -  |   ENT     | 
+// | SHFT |     |      |     |     |   |  1  |  2  |  3  |  =  | ' (SHFT)  |
+//              |      |     |     |   |     |     |  0  |
 
                         bindings = <
    &trans &kp TILDE   &trans      &kp UP      &trans     &trans      &kp N7   &kp N8  &kp N9 &kp PLUS   &kp BSPC        &trans
-   &trans &kp GRAVE   &kp LEFT    &kp DOWN    &kp RIGHT  &trans      &kp N4   &kp N5  &kp N6 &kp MINUS  &kp SQT         &trans
-   &trans &trans      &trans      &trans      &trans     &trans      &kp N1   &kp N2  &kp N3 &kp EQUAL  &mt RSHFT RET   &trans
-                                  &kp LCTRL   &trans     &kp SPACE   &kp RET  &trans  &kp N0
+   &trans &kp GRAVE   &kp LEFT    &kp DOWN    &kp RIGHT  &trans      &kp N4   &kp N5  &kp N6 &kp MINUS  &kp RET         &trans
+   &trans &kp LSHFT   &trans      &trans      &trans     &trans      &kp N1   &kp N2  &kp N3 &kp EQUAL  &mt RSHFT SQT   &trans
+                                  &trans      &trans     &trans      &trans   &trans  &kp N0
                         >;
                 };
         };
