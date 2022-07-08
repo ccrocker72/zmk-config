@@ -67,13 +67,13 @@
                 game_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB        &kp N1        &kp N2         &kp N3     &mt R N4            &trans       &trans        &trans        &trans         &trans          &trans
+   &trans    &kp ESC        &kp N1        &kp N2         &kp N3     &mt R N4            &trans       &trans        &trans        &trans         &trans          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp ESC        &trans        &kp W         &trans       &trans             &trans       &trans         &trans       &trans         &trans          &trans
+   &trans    &kp TAB        &kp Q         &kp W         &kp E       &trans              &trans       &trans         &trans       &kp L          &trans          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans         &kp A         &kp S         &kp D          &kp M            &trans       &trans          &trans      &trans         &trans          &trans
+   &trans    &kp M          &kp A         &kp S         &kp D        &kp F              &kp B        &kp M          &trans       &trans         &trans          &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &trans         &kp LALT    &kp LALT            &trans       &trans        &trans 
+                                          &kp C         &kp LALT    &kp SPACE           &trans       &trans        &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
