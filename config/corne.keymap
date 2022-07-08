@@ -67,11 +67,11 @@
                 game_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp ESC        &kp N1        &kp N2        &kp N3      &mt R N4            &trans       &trans         &trans       &trans          &trans          &trans
+   &trans    &kp N1        &kp N2        &kp ESC        &kp N3      &kp N4              &trans       &trans         &trans       &trans          &trans          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp TAB        &kp Q         &kp W         &kp E       &trans              &trans       &trans         &trans       &trans          &trans          &trans
+   &trans    &kp TAB        &kp Q         &kp W         &kp E       &kp R               &trans       &trans         &trans       &trans          &trans          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp M          &kp A         &kp S         &kp D        &kp F              &trans       &trans         &trans       &trans          &trans          &trans
+   &trans    &kp M          &kp A         &kp S         &kp D       &kp F               &trans       &trans         &trans       &trans          &trans          &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &kp C         &mt B M   &mt LALT SPACE        &trans       &trans        &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
