@@ -1,10 +1,10 @@
 both middle thumb keys = toggle game layer
 
 // ---------------------------------DEFAULT------------------------------------------
-// |  Q        |  W |  E |  R |  T |       |  Y         |  U      |  I   |  O  |  P     |
-// |  A        |  S |  D |  F |  G |       |  H         |  J      |  K   |  L  |  ; : ' |
-// |  Z (CTRL) |  X |  C |  V |  B |       |  N         |  M      |  ,   |  .  |  /     |
-//                       |     ALT     |  lay_1    | SPC (CTRL)  |       | SPC (SHFT) |  lay_2  |      |
+// |  Q        |  W |  E |  R     |  T          |      |  Y         |  U      |  I   |  O  |  P     |
+// |  A        |  S |  D |  F     |  G          |      |  H         |  J      |  K   |  L  |  ; : ' |
+// |  Z (CTRL) |  X |  C |  V     |  B          |      |  N         |  M      |  ,   |  .  |  /     |
+//                  | ALT|  lay_1 | SPC (CTRL)  |      | SPC (SHFT) |  lay_2  |      |
                                     
 // ---------------------------------LOWER LAYER------------------------------------------
 // |  TAB  |        |         |         |     |        |     |  7  |  8  |  9  |   +       |

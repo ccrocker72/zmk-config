@@ -7,7 +7,7 @@
         compatible = "zmk,combos";
         combo_gui {
             timeout-ms = <50>;
-            key-positions = <31 34>;
+            key-positions = <37 40>;
             bindings = <&tog 3>;
         };
     };
