@@ -12,35 +12,13 @@
         };
     };
     behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "X_F4";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp X>, <&kp F4>;
-        };
-        td1: tap_dance_1 {
+        0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "semi_quote";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMI>, <&kp SQT>;
         };
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "lpar_lbrk_lbrc";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC> ;
-        };
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "D_DELETE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp D>, <&kp DEL>;
-        };
-
     };
 
         keymap {
@@ -51,11 +29,11 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp Q         &kp W         &kp E          &kp R         &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P             &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp A         &kp S         &td3           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td1              &trans
+   &trans    &kp A         &kp S         &kp D           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td0              &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans  &mt LCTRL Z     &td0          &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT     &kp FSLH           &trans
+   &trans  &mt LCTRL Z     &kp X         &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT     &kp FSLH           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LALT    &mt &mo 1 LGUI&mt LCTRL SPACE   &mt RSHFT SPACE    &mo 2         &trans
+                                       &kp LALT         &mo 1    &mt LCTRL SPACE   &mt RSHFT SPACE    &mo 2        &kp RGUI
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
