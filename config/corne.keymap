@@ -8,67 +8,39 @@
         combo_gui {
             timeout-ms = <50>;
             key-positions = <31 34>;
-            bindings = <&kp LGUI>;
+            bindings = <&tog LGUI>;
         };
     };
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "Z_LSHFT_CTRL";
+            label = "X_F4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LSHFT Z>, <&kp LCTRL>;
+            bindings = <&kp X>, <&kp F4>;
         };
         td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "A_CAPS_LCK";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp CLCK>, <&kp ESC>;
-        };
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Q_TAB_ESC";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&kp TAB>, <&kp ESC>;
-        };
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "R_F4";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp R>, <&kp F4>;
-        };
-        td4: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "hold_1_tog_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&mo 2>, <&tog 3>;
-        };
-        td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "semi_quote";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMI>, <&kp SQT>;
         };
-        td6: tap_dance_6 {
+        td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "lpar_lbrk_lbrc";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC> ;
         };
-        td7: tap_dance_7 {
+        td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "rpar_rbrk_rbrc";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC> ;
         };
-        td8: tap_dance_8 {
+        td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "D_DELETE";
             #binding-cells = <0>;
@@ -84,40 +56,39 @@
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &td2          &kp W         &kp E          &td3          &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P             &trans
+   &trans    &kp Q         &kp W         &kp E          &kp R         &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P             &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td1          &kp S         &td8           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td5              &trans
+   &trans    &kp A         &kp S         &td4           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td1              &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td0          &kp X         &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT    &mt RSHFT FSLH      &trans
+   &trans  &mt LCTRL Z     &td0          &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT     &kp FSLH           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LCTRL       &kp LALT  &mt LSHFT SPACE   &mt RSHFT SPACE    &td4         &trans
+                                       &kp LALT       &mo 1     &mt LSHFT SPACE   &mt RSHFT SPACE    &mo 2         &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 lower_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans   &kp N1        &kp N2         &kp N3       &kp N4          &kp N5           &trans       &kp MINUS    &kp EQUAL       &kp DEL      &kp BSPC         &trans
+   &trans    &kp TAB       &trans        &trans         &trans        &trans            &trans       &kp N7        &kp N8       &kp N9         &kp PLUS          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans   &kp N6        &kp N7         &kp N8       &kp N9          &kp N0           &td6          &td7          &kp UP        &kp BSLH     &kp RET         &trans
+   &trans    &kp ESC       &trans        &trans         &trans        &trans            &trans       &kp N4        &kp N5       &kp N6         &kp MINUS         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans  &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR          &trans        &kp LEFT      &kp DOWN      &kp RIGHT    &kp RSHFT       &trans
+   &trans    &kp LSHFT     &trans        &trans         &trans        &trans            &trans       &kp N1        &kp N2       &kp N3     &mt RSHFT EQUAL       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &trans      &kp LCTRL      &kp GRAVE          &trans        &trans        &trans   
+                                         &trans         &trans        &trans            &trans       &kp N0        &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
-
                 raise_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &trans        &trans        &trans         &trans        &trans            &trans       &kp N7        &kp N8       &kp N9         &kp PLUS          &trans
+   &trans   &kp N1        &kp N2         &kp N3       &kp N4          &kp N5           &trans       &kp MINUS    &kp EQUAL       &kp DEL      &kp BSPC         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans        &trans        &trans         &trans        &trans            &trans       &kp N4        &kp N5       &kp N6         &kp MINUS         &trans
+   &trans   &kp N6        &kp N7         &kp N8       &kp N9          &kp N0           &td2          &td3          &kp UP        &kp BSLH     &kp RET         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans        &trans        &trans         &trans        &trans            &trans       &kp N1        &kp N2       &kp N3     &mt RSHFT EQUAL       &trans
+   &trans  &kp LSHFT    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_CLR          &trans        &kp LEFT      &kp DOWN      &kp RIGHT    &kp RSHFT       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &trans         &trans        &trans            &trans       &trans        &kp N0
+                                         &trans      &kp LCTRL      &kp GRAVE          &trans        &trans        &trans   
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
