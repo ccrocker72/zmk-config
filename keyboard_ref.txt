@@ -4,7 +4,7 @@ both middle thumb keys = toggle game layer
 // |  Q        |  W      |  E          |  R        |  T          |       |  Y         |  U      |  I   |  O  |  P     |
 // |  A        |  S      |  D : DELETE |  F        |  G          |       |  H         |  J      |  K   |  L  |  ; : ' |
 // |  Z (CTRL) |  X : F4 |  C          |  V        |  B          |       |  N         |  M      |  ,   |  .  |  /     |
-//                       |     ALT     |    lay_1  | SPC (SHFT)  |       | SPC (SHFT) |  lay_2  |      |
+//                       |     ALT     |  lay_1    | SPC (SHFT)  |       | SPC (SHFT) |  lay_2  |      |
                                     
 // ---------------------------------LOWER LAYER------------------------------------------
 // |  TAB  |        |         |         |     |        |     |  7  |  8  |  9  |   +       |
@@ -23,5 +23,3 @@ both middle thumb keys = toggle game layer
 // |   ESC   |     |  W   |     |         |   |     |     |     |     |    | 
 // |         |  A  |  S   |  D  |    M    |   |     |     |     |     |    |
 //                 |      | ALT |   ALT   |   |     |     |     |
-
-<&kp LPAR>, <&kp LBKT>, <&kp LBRC>
