@@ -46,28 +46,28 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&mo 2>, <&tog 3>;
-        }
+        };
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "semi_quote";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMI>, <&kp SQT>;
-        }
+        };
         td6: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             label = "lpar_lbrk_lbrc";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC> ;
-        }
+        };
         td7: tap_dance_7 {
             compatible = "zmk,behavior-tap-dance";
             label = "rpar_rbrk_rbrc";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC> ;
-        }
+        };
         td8: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
             label = "D_DELETE";
