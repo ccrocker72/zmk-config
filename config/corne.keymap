@@ -35,13 +35,6 @@
         };
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
-            label = "rpar_rbrk_rbrc";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC> ;
-        };
-        td4: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
             label = "D_DELETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -58,7 +51,7 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp Q         &kp W         &kp E          &kp R         &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P             &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp A         &kp S         &td4           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td1              &trans
+   &trans    &kp A         &kp S         &td3           &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td1              &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans  &mt LCTRL Z     &td0          &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT     &kp FSLH           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
@@ -82,11 +75,11 @@
                 raise_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans   &kp N1        &kp N2         &kp N3       &kp N4          &kp N5           &trans       &kp MINUS    &kp EQUAL       &kp DEL      &kp BSPC         &trans
+   &trans   &kp N1        &kp N2         &kp N3       &kp N4          &kp N5           &trans       &kp MINUS    &kp EQUAL     &kp DEL      &kp BSPC         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans   &kp N6        &kp N7         &kp N8       &kp N9          &kp N0           &td2          &td3          &kp UP        &kp BSLH     &kp RET         &trans
+   &trans   &kp N6        &kp N7         &kp N8       &kp N9          &kp N0           &kp BSLH   &mt LBKT LPAR  &kp UP       &mt RBKT RPAR     &kp RET         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans  &kp LSHFT    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_CLR          &trans        &kp LEFT      &kp DOWN      &kp RIGHT    &kp RSHFT       &trans
+   &trans  &kp LSHFT    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_CLR          &kp LBRC     &kp LEFT     &kp DOWN      &kp RIGHT    &mt RSHFT RBRC      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                          &trans      &kp LCTRL      &kp GRAVE          &trans        &trans        &trans   
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

@@ -1,7 +1,5 @@
 both middle thumb keys = toggle game layer
 
-consider changing outer shifts to ctrl
-consider changing hold r to f4 or move f4 to hold x
 // ---------------------------------DEFAULT------------------------------------------
 // |  Q        |  W      |  E          |  R        |  T          |       |  Y         |  U      |  I   |  O  |  P     |
 // |  A        |  S      |  D : DELETE |  F        |  G          |       |  H         |  J      |  K   |  L  |  ; : ' |
@@ -15,13 +13,15 @@ consider changing hold r to f4 or move f4 to hold x
 //                  |         |         |     |        |     |  0  |     |
 
 // ---------------------------------RAISE LAYER------------------------------------------
-// |  1  |    2    |    3    |    4    |  5  |        |              |      -      |  =   |  DEL  |  BKSPC |
-// |  6  |    7    |    8    |    9    |  0  |        |  ( : [ : {   |  ) : ] : }  |  UP  |  }    |   RET  |
-// | SHFT|  BT 0   |  BT 1   |  BT 2   |BTCLR|        |              |     LEFT    | DOWN | RIGHT |   SHFT |
-//                 |         |  CTRL   | `   |        |              |             |      |
+// |  1  |    2    |    3    |    4    |  5  |        |       |    -    |  =   |  DEL    |  BKSPC    |
+// |  6  |    7    |    8    |    9    |  0  |        |   \   |  ( ([)  |  UP  |  ) (])  |   RET     |
+// | SHFT|  BT 0   |  BT 1   |  BT 2   |BTCLR|        |   {   |  LEFT   | DOWN | RIGHT   |  } (SHFT) |
+//                 |         |  CTRL   | `   |        |       |             |      |
 
 // ----------------------------------GAME LAYER------------------------------------------
 // |   TAB   |  1  |  2   |  3  |  4 (R)  |   |     |     |     |     |    |
 // |   ESC   |     |  W   |     |         |   |     |     |     |     |    | 
 // |         |  A  |  S   |  D  |    M    |   |     |     |     |     |    |
 //                 |      | ALT |   ALT   |   |     |     |     |
+
+<&kp LPAR>, <&kp LBKT>, <&kp LBRC>
