@@ -21,5 +21,5 @@ both middle thumb keys = toggle game layer
 // ----------------------------------MEDIA LAYER------------------------------------------
 // |   1     |  2  |  ESC |  3  |    4    |   |     |     | MUTE    |     |    |
 // |   TAB   |  Q  |  W   |  E  |    R    |   |     |     | VOL UP  |     |    | 
-// |   B     |  A  |  S   |  D  |    F    |   |     |LEFT | VOL DWN |RIGHT|    |
-//                 |  C   |  M  |   ALT   |   |     | ⏯  |     |
+// |   M     |  A  |  S   |  D  |    F    |   |     |LEFT | VOL DWN |RIGHT|    |
+//                 | C (B)| ALT |  SPACE  |   |     | ⏯  |     |
