@@ -22,4 +22,4 @@ both middle thumb keys = toggle game layer
 // |   1     |  2  |  ESC |  3  |    4    |   |     |     | MUTE    |     |    |
 // |   TAB   |  Q  |  W   |  E  |    R    |   |     |     | VOL UP  |     |    | 
 // |   B     |  A  |  S   |  D  |    F    |   |     |  << | VOL DWN | >>  |    |
-//                 |  C   |  M  |   ALT   |   |     | ⏯  |     |
+//                 |  C   |  M  |   ALT   |   |QUIT | ⏯  |     |
