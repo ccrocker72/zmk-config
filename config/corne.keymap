@@ -35,10 +35,20 @@
             key-positions = <25 26>;
             bindings = <&kp LSHFT>;
         };
+        combo_rshft {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RSHFT>;
+        };
         combo_enter {
             timeout-ms = <50>;
             key-positions = <20 21 22>;
             bindings = <&kp RET>;
+        };
+        combo_gui {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&kp LGUI>;
         };
 
     };
@@ -53,7 +63,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z         &kp X         &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LGUI         &mo 1    &mt LCTRL SPACE   &mt RSHFT SPACE    &mo 2        &kp BSPC
+                                       &kp LCTRL        &mo 1       &kp SPACE           &kp BSPC       &mo 2       &kp SPACE
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
