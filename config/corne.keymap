@@ -5,35 +5,40 @@
 / {
     combos {
         compatible = "zmk,combos";
-        media_combo {
+        combo_media {
             timeout-ms = <50>;
             key-positions = <37 40>;
             bindings = <&tog 3>;
         };
-        backspace_combo {
+        combo_backspace {
             timeout-ms = <50>;
             key-positions = <9 10>;
             bindings = <&kp BSPC>;
         };
-        quote_combo {
+        combo_quote {
             timeout-ms = <50>;
             key-positions = <21 22>;
             bindings = <&kp SQT>;
         };
-        tab_combo {
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp TAB>;
         };
-        caps_combo {
+        combo_caps {
             timeout-ms = <50>;
             key-positions = <13 14>;
             bindings = <&kp CAPS>;
         };
-        lshft_combo {
+        combo_lshft {
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp LSHFT>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <20 21 22>;
+            bindings = <&kp RET>;
         };
 
     };
