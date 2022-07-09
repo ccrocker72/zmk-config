@@ -5,34 +5,48 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_gui {
+        media_combo {
             timeout-ms = <50>;
             key-positions = <37 40>;
             bindings = <&tog 3>;
         };
-    };
-    behaviors {
-        td0: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "semi_quote";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&kp SQT>;
+        backspace_combo {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp BSPC>;
         };
-        
-    };
+        quote_combo {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp SQT>;
+        };
+        tab_combo {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+        };
+        caps_combo {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp CAPS>;
+        };
+        lshft_combo {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LSHFT>;
+        };
 
+    };
         keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp Q         &kp W         &kp E          &kp R         &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P             &trans
+   &trans    &kp Q         &kp W         &kp E          &kp R         &kp T              &kp Y         &kp U         &kp I        &kp O        &kp P              &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp A         &kp S         &kp D          &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &td0              &trans
+   &trans    &kp A         &kp S         &kp D          &kp F         &kp G              &kp H         &kp J         &kp K        &kp L        &kp SEMI           &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans  &mt LCTRL Z     &kp X         &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT     &kp FSLH           &trans
+   &trans    &kp Z         &kp X         &kp C          &kp V         &kp B              &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                        &kp LGUI         &mo 1    &mt LCTRL SPACE   &mt RSHFT SPACE    &mo 2        &kp BSPC
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
