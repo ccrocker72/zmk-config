@@ -4,7 +4,7 @@ both middle thumb keys = toggle game layer
 // |  Q        |  W |  E |  R     |  T          |      |  Y         |  U      |  I   |  O  |  P     |
 // |  A        |  S |  D |  F     |  G          |      |  H         |  J      |  K   |  L  |  ; : ' |
 // |  Z (CTRL) |  X |  C |  V     |  B          |      |  N         |  M      |  ,   |  .  |  /     |
-//                  | GUI|  lay_1 | SPC (CTRL)  |      | SPC (SHFT) |  lay_2  |      |
+//                  | GUI|  lay_1 | SPC (CTRL)  |      | SPC (SHFT) |  lay_2  | BKSPC|
                                     
 // ---------------------------------LOWER LAYER------------------------------------------
 // |  TAB  |        |         |         |     |        |     |  7  |  8  |  9  |   +       |
