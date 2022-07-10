@@ -10,6 +10,11 @@
             key-positions = <37 40>;
             bindings = <&tog 3>;
         };
+        combo_dvorak {
+            timeout-ms = <50>;
+            key-positions = <36 41>;
+            bindings = <&tog 4>;
+        };
         combo_backspace {
             timeout-ms = <50>;
             key-positions = <9 10>;
@@ -50,11 +55,7 @@
             key-positions = <38 39>;
             bindings = <&kp LGUI>;
         };
-        combo_dvorak {
-            timeout-ms = <50>;
-            key-positions = <36 51>;
-            bindings = <&tog 4>;
-        };
+
 
     };
         keymap {
