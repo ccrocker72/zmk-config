@@ -56,17 +56,15 @@
             bindings = <&kp LGUI>;
         };
         combo_esc {
-            timeout_ms = <50>;
-            key_positions = <1 2>;
+            timeout-ms = <50>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
-        }
-        combo_1 {
-            timeout_ms = <50>;
-            key_positions = <1 37>;
-            bindings = <&kp ESC>;
-        }
-
-
+        };
+         combo_one {
+            timeout-ms = <50>;
+            key-positions = <1 37>;
+            bindings = <&kp N1>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
