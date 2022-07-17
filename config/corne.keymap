@@ -27,12 +27,12 @@
         };
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <13 14>;
             bindings = <&kp TAB>;
         };
         combo_caps {
             timeout-ms = <20>;
-            key-positions = <13 14>;
+            key-positions = <13 14 15>;
             bindings = <&kp CAPS>;
         };
         combo_lshft {
@@ -55,6 +55,16 @@
             key-positions = <38 39>;
             bindings = <&kp LGUI>;
         };
+        combo_esc {
+            timeout_ms = <50>;
+            key_positions = <1 2>;
+            bindings = <&kp ESC>;
+        }
+        combo_1 {
+            timeout_ms = <50>;
+            key_positions = <1 37>;
+            bindings = <&kp ESC>;
+        }
 
 
     };
@@ -76,7 +86,7 @@
                 lower_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB       &trans        &trans         &trans        &trans            &trans        &kp N7       &kp N8       &kp BSPC      &kp PLUS         &trans
+   &trans    &kp TAB       &trans        &trans         &trans        &trans            &kp N7        &kp N8       &kp N9       &kp BSPC      &kp PLUS         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp ESC       &trans        &trans         &trans        &trans            &kp N4        &kp N5       &kp N6       &kp RET       &kp MINUS        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
