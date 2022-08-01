@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    &mt {
+        tapping-term-ms = <250>;
+    };
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -62,7 +65,7 @@
         combo_media {
             timeout-ms = <50>;
             key-positions = <37 40>;
-            bindings = <&tog 1>;
+            bindings = <&tog 3>;
         };
     };
         keymap {
@@ -76,7 +79,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z         &kp X         &kp C          &kp V         &kp B            &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH            &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LCTRL       &kp LALT     &kp SPACE          &kp BSPC      &td0          &kp DEL
+                                       &kp LCTRL       &kp LALT   &mt LSHFT SPACE     &kp BSPC      &td0          &kp DEL
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
