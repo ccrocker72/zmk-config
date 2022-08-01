@@ -56,9 +56,6 @@
             bindings = <&tog 3>;
         };
     };
-    &mt {
-        tapping-term-ms = <250>;
-    };
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
