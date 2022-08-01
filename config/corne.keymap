@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LAYER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 1>, <&to 2>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -67,7 +76,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z         &kp X         &kp C          &kp V         &kp B            &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH            &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LCTRL       &kp LALT     &kp SPACE          &kp BSPC  &mt &mo 1 &to 2   &kp DEL
+                                       &kp LCTRL       &kp LALT     &kp SPACE          &kp BSPC      &td0          &kp DEL
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
