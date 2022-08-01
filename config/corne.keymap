@@ -8,8 +8,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LAYER";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 2>;
+            tapping-term-ms = <250>;
+            bindings = <&mo 1>, <&mo 2>;
         };
     };
     combos {
