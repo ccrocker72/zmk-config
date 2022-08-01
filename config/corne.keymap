@@ -6,15 +6,6 @@
     &mt {
         tapping-term-ms = <250>;
     };
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LAYER";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&mo 1>, <&to 2>;
-        };
-    };
     combos {
         compatible = "zmk,combos";
         combo_esc {
