@@ -3,9 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    &mt {
-        tapping-term-ms = <250>;
-    };
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -58,6 +55,9 @@
             key-positions = <37 40>;
             bindings = <&tog 3>;
         };
+    };
+    &mt {
+        tapping-term-ms = <250>;
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -113,6 +113,5 @@
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
-
         };
 };
