@@ -5,91 +5,93 @@
 &mt {
     tapping-term-ms = <175>;
 };
-
+&lt {
+    tapping-term-ms = <175>;
+};
 / {
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp V>, <&kp LT>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp M>, <&kp GT>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp F>, <&kp LPAR>;
         };
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp J>, <&kp RPAR>;
         };
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp R>, <&kp LBRC>;
         };
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp U>, <&kp RBRC>;
         };
         td6: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_6";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp A>, <&kp ESC>, <&kp CAPS>;
         };
         td7: tap_dance_7 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_7";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp X>, <&kp DEL>;
         };
         td8: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_8";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp Q>, <&kp TAB>;
         };       
         td9: tap_dance_9 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_9";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp P>, <&kp BSLH>;
         };    
         td10: tap_dance_10 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_10";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp SEMI>, <&kp SQT>;
         };                 
         td11: tap_dance_11 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_11";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&kp O>, <&kp UNDER>;
         };                 
     }; 
@@ -111,9 +113,9 @@
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &td8          &kp W         &kp E          &td3         &kp T            &kp Y          &td5         &kp I        &td11        &td9                 &trans
+   &trans    &td8          &kp W         &kp E          &td4         &kp T            &kp Y          &td5         &kp I        &td11        &td9                 &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td6          &kp S         &kp D          &td1         &kp G            &kp H          &td3         &kp K        &kp L        &td10                &trans
+   &trans    &td6          &kp S         &kp D          &td2         &kp G            &kp H          &td3         &kp K        &kp L        &td10                &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &mt LSHFT Z   &td7          &kp C          &td0         &kp B            &kp N          &td1         &kp COMMA    &kp DOT      &mt RSHFT FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
