@@ -64,23 +64,23 @@
             tapping-term-ms = <200>;
             bindings = <&kp X>, <&kp DEL>;
         };
-        td10: tap_dance_10 {
+        td10: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_10";
+            label = "TAP_DANCE_8";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp TAB>;
         };       
-        td11: tap_dance_11 {
+        td11: tap_dance_9 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_11";
+            label = "TAP_DANCE_9";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp P>, <&kp UNDER>;
         };    
-        td12: tap_dance_12 {
+        td12: tap_dance_10 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_12";
+            label = "TAP_DANCE_10";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMI>, <&kp SQT>;
@@ -109,9 +109,9 @@
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &td10         &kp W         &kp E          &td3         &kp T            &kp Y          &td5         &kp I        &kp O        &td11               &trans
+   &trans    &td8          &kp W         &kp E          &td3         &kp T            &kp Y          &td5         &kp I        &kp O        &td9                 &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td6          &kp S         &kp D          &td1         &kp G            &kp H          &td3         &kp K        &kp L        &td12 SEMI            &trans
+   &trans    &td6          &kp S         &kp D          &td1         &kp G            &kp H          &td3         &kp K        &kp L        &td10                &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &mt Z LSHFT   &td7          &kp C          &td0         &kp B            &kp N          &td1         &kp COMMA    &kp DOT      &mt RSHFT FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
