@@ -64,20 +64,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp X>, <&kp DEL>;
         };
-        td8: tap_dance_8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_8";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp CTRL+C>;
-        };
-        td9: tap_dance_9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_9";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt Z LSHFT>, <&kp CTRL+Z>;
-        }; 
         td10: tap_dance_10 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_10";
@@ -123,11 +109,11 @@
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &td10        &kp W          &kp E          &td3         &kp T            &kp Y          &td5         &kp I        &kp O        &td11               &trans
+   &trans    &td10         &kp W         &kp E          &td3         &kp T            &kp Y          &td5         &kp I        &kp O        &td11               &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &td6          &kp S         &kp D          &td1         &kp G            &kp H          &td3         &kp K        &kp L        &td12 SEMI            &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td9          &td7          &td8           &td0         &kp B            &kp N          &td1         &kp COMMA    &kp DOT      &mt RSHFT FSLH       &trans
+   &trans    &mt Z LSHFT   &td7          &kp C          &td0         &kp B            &kp N          &td1         &kp COMMA    &kp DOT      &mt RSHFT FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                          &kp LALT    &kp LCTRL      &kp SPACE        &kp BSPC       &mo 2        &kp DEL 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
