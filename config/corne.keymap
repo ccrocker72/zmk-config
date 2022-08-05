@@ -58,11 +58,11 @@
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp ESC        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &trans            &kp RBRC       &trans       &trans         &kp UNDER     &kp BSLH       &trans
+   &trans    &kp ESC        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &trans            &kp RBRC       &trans       &trans         &kp BSLH      &kp UNDER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp TAB        &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp CARET    &kp AMPS       &kp STAR      &kp ENTER      &trans
+   &trans    &kp TAB        &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp PRCNT    &kp CARET      &kp AMPS      &kp STAR       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp GT         &trans       &trans         &trans        &trans         &trans
+   &trans    &kp LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp GT         &trans       &trans         &trans        &kp ENTER      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &sk LSHFT     &sk LCTRL    &sk LALT          &kp SQT        &trans       &kp DQT
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
