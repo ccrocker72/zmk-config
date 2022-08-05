@@ -3,105 +3,24 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <200>;
 };
 &lt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <200>;
 };
+
 / {
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp V>, <&kp LT>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp M>, <&kp GT>;
-        };
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp F>, <&kp LPAR>;
-        };
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp J>, <&kp RPAR>;
-        };
-        td4: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_4";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp R>, <&kp LBRC>;
-        };
-        td5: tap_dance_5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_5";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp U>, <&kp RBRC>;
-        };
-        td6: tap_dance_6 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_6";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp A>, <&kp ESC>, <&kp CAPS>;
-        };
-        td7: tap_dance_7 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_7";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp X>, <&kp DEL>;
-        };
-        td8: tap_dance_8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_8";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp Q>, <&kp TAB>;
-        };       
-        td9: tap_dance_9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_9";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp P>, <&kp BSLH>;
-        };    
-        td10: tap_dance_10 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_10";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp SEMI>, <&kp SQT>;
-        };                 
-        td11: tap_dance_11 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_11";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp O>, <&kp UNDER>;
-        };                 
+            tapping-term-ms = <200>;
+            bindings = <&kp LCTRL>, <&kp LSHFT>;
+        };             
     }; 
     combos {
         compatible = "zmk,combos";
-        combo_numpad {
-            timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&to 1>;
-        };
         combo_media {
             timeout-ms = <50>;
             key-positions = <37 40>;
@@ -113,39 +32,39 @@
                 default_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &td8          &kp W         &kp E          &td4         &kp T            &kp Y          &td5         &kp I        &td11        &td9                 &trans
+   &trans    &kp Q          &kp W         &kp E         &kp R        &kp T             &kp Y          &kpU         &kp I          &kp O         &kp P          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &td6          &kp S         &kp D          &td2         &kp G            &kp H          &td3         &kp K        &kp L        &td10                &trans
+   &trans    &kp A          &kp S         &kp D         &kp F        &kp G             &kp H          &kp J        &kp K          &kp L         &kp SEMI       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &mt LSHFT Z   &td7          &kp C          &td0         &kp B            &kp N          &td1         &kp COMMA    &kp DOT      &mt RSHFT FSLH       &trans
+   &trans    &kp Z          &kp x         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &kp LALT    &kp LCTRL      &kp SPACE        &kp BSPC       &mo 2        &kp DEL 
+                                          &kp BSPC      &mo 1      &kp SPACE           &mo 2          &td0         &kp DEL 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp GRAVE    &trans        &trans         &trans        &trans            &trans        &kp N7        &kp N8       &kp N9        &kp MINUS         &trans
+   &trans    &trans         &trans        &trans        &trans       &trans            &kp GRAVE      &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp ESC      &trans        &trans         &trans        &trans            &trans        &kp N4        &kp N5       &kp N6        &kp PLUS          &trans
+   &trans    &trans         &trans        &trans        &trans       &trans            &kp UNDER      &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LSHFT    &trans        &trans         &trans        &trans            &trans        &kp N1        &kp N2       &kp N3        &kp EQUAL         &trans
+   &trans    &trans         &trans        &trans        &trans       &trans            &trans         &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                       &kp LALT       &kp LSHFT  &mt LSHFT SPACE       &kp DOT        &to 0        &kp N0
+                                          &trans        &trans       &trans            &trans         &kp DOT      &kp N0
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR          &trans      &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP   &kp DEL            &trans
+   &trans &kp C_VOL_UP      &trans        &trans        &trans       &trans            &trans         &trans       &trans         &trans        &trans         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans       &trans         &trans        &trans        &trans           &kp PG_UP   &kp HOME       &kp UP        &kp END        &kp RET            &trans
+   &trans &kp C_VOL_DN      &kp HOME      &kp UP        &kp END      &kp PG_UP         &trans         &trans       &trans         &trans        &trans         &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans       &trans         &trans        &trans        &trans           &kp PG_DN   &kp LEFT       &kp DOWN      &kp RIGHT      &trans             &trans
+   &trans &kp C_MUTE        &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &trans         &trans       &trans         &trans        &trans         &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &trans     &kp LCTRL   &kp LSHFT             &trans      &trans         &trans
+                                          &kp LSHFT     &kp LCTRL    &kp ENTER         &trans         &trans       &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
