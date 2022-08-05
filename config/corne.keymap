@@ -24,7 +24,7 @@
         combo_media {
             timeout-ms = <50>;
             key-positions = <37 40>;
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
         };
     };
         keymap {
