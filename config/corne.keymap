@@ -51,20 +51,20 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp LSHFT      &trans        &kp TILDE     &kp GRAVE    &kp LT            &trans         &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &sk LSHFT    &trans            &no BSPC       &kp N0       &kp DOT      
+                                          &trans        &sk LSHFT    &trans            &kp BSPC       &kp N0       &kp DOT      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp ESC        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &kp F4            &kp RBRC       &kp SQT      &kp DQT        &trans        &kp DEL        &trans
+   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &kp F4            &kp RBRC       &kp SQT      &kp DQT        &kp STAR      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp TAB        &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
+   &trans    &kp ESC        &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp GT         &kp MINUS    &kp UNDER      &trans        &sk RSHFT      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LCTRL     &sk LSHFT    &sk LALT          &trans         &sl 1        &trans
+                                          &sk LCTRL     &sk LALT     &sk LSHFT         &trans         &sl 1        &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
