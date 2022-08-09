@@ -10,23 +10,6 @@
 };
 
 / {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&kp LCTRL>;
-        };             
-    }; 
-    combos {
-        compatible = "zmk,combos";
-        combo_media {
-            timeout-ms = <50>;
-            key-positions = <37 40>;
-            bindings = <&tog 3>;
-        };
-    };
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
@@ -64,7 +47,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp GT         &kp MINUS    &kp UNDER      &kp EQUAL     &sk RSHFT      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LCTRL     &sk LALT     &sk LSHFT         &sl 1          &kp RSHFT    &trans
+                                          &sk LCTRL     &sk LALT     &sk LSHFT         &sl 1          &kp RSHFT    &to 3
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -77,7 +60,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z         &kp A         &kp S         &kp D        &kp F               &trans       &kp LEFT    &kp C_VOL_DN    &kp RIGHT      &trans           &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &mt B C       &mt LALT V   &kp SPACE           &kp ESC      &to 0      &trans 
+                                         &mt B C       &mt LALT V   &kp SPACE           &kp ESC      &to 0       &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
