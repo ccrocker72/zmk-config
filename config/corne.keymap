@@ -43,11 +43,11 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &kp LA(F4)        &kp RBRC       &kp SQT      &kp DQT        &kp STAR      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LA(TAB)    &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
+   &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP         &kp RPAR       &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp RBKT       &kp MINUS    &kp UNDER      &kp EQUAL     &sk RSHFT      &trans
+   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN         &kp RBKT       &kp MINUS    &kp UNDER      &kp EQUAL     &sk RALT       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT      &sk LSHFT    &sk LCTRL         &to 3          &kp RSHFT    &to 3
+                                          &trans        &sk LSHFT    &sk LCTRL         &to 3          &kp RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
