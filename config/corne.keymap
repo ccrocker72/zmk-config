@@ -62,6 +62,26 @@
             key-positions = <21 22>;
             bindings = <&kp RBRC>;
         };
+        combo_percent {
+            timeout-ms = <50>;
+            key-positions = <40 19>;
+            bindings = <&kp PRCNT>;
+        };
+        combo_caret {
+            timeout-ms = <50>;
+            key-positions = <40 20>;
+            bindings = <&kp CARET>;
+        };
+        combo_ampersand {
+            timeout-ms = <50>;
+            key-positions = <40 21>;
+            bindings = <&kp AMPS>;
+        };
+        combo_star {
+            timeout-ms = <50>;
+            key-positions = <40 22>;
+            bindings = <&kp STAR>;
+        };
         combo_gui {
             timeout-ms = <50>;
             key-positions = <37 40>;
@@ -79,31 +99,31 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &sl 1      &kp SPACE           &kp BSPC       &sl 2        &trans 
+                                          &trans        &sl 1      &kp SPACE           &kp RSHFT      &sl 2        &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB       &kp BSPC       &kp BSLH      &kp PIPE     &trans            &kp LC(Y)      &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
+   &trans    &kp TAB       &kp LSHFT      &kp BSLH      &kp PIPE     &trans            &kp LC(Y)      &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LC(A)     &kp LC(S)      &kp BSPC      &kp LC(F)    &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
+   &trans    &kp LC(A)     &kp LC(S)      &kp BSPC      &kp LC(F)    &kp GRAVE         &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp LC(Z)     &kp LC(X)      &kp LC(C)     &kp LC(V)    &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &kp LSHFT    &sk ESC           &kp BSPC       &kp N0       &trans      
+                                          &trans        &kp ESC      &sk LGUI          &kp BSPC       &kp N0       &trans      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &kp SEMI     &kp COLON      &kp STAR      &kp DEL        &trans
+   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &kp SEMI     &kp COLON      &kp BSPC      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
+   &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp UNDER    &kp MINUS      &kp EQUAL     &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp MINUS    &kp UNDER      &kp EQUAL     &kp QMARK      &trans
+   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &trans       &trans         &trans        &kp QMARK      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &trans        &sk LCTRL    &sk LSHFT         &to 3        &kp RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
