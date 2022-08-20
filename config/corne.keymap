@@ -17,20 +17,10 @@
             key-positions = <37 1>;
             bindings = <&kp LA(TAB)>;
         };
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <3 4>;
-            bindings = <&kp LBRC>;
-        };
         combo_redo {
             timeout-ms = <50>;
             key-positions = <37 6>;
             bindings = <&kp LC(Y)>;
-        };
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindings = <&kp RBRC>;
         };
         combo_all {
             timeout-ms = <50>;
@@ -47,6 +37,16 @@
             key-positions = <37 15>;
             bindings = <&kp LA(F4)>;
         };
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LBRC>;
+        };
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LBKT>;
+        };
         combo_lpar {
             timeout-ms = <50>;
             key-positions = <15 16>;
@@ -62,6 +62,16 @@
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
         };
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp RBKT>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp RBRC>;
+        };
         combo_undo {
             timeout-ms = <50>;
             key-positions = <37 25>;
@@ -71,11 +81,6 @@
             timeout-ms = <50>;
             key-positions = <37 26>;
             bindings = <&kp LC(X)>;
-        };
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp LBKT>;
         };
         combo_copy {
             timeout-ms = <50>;
@@ -87,10 +92,10 @@
             key-positions = <37 28>;
             bindings = <&kp LC(V)>;
         };
-        combo_rbkt {
+        combo_gui {
             timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&kp RBKT>;
+            key-positions = <37 40>;
+            bindings = <&kp LGUI>;
         };
     };
         keymap {
@@ -106,7 +111,7 @@
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &trans        &sl 1      &kp SPACE           &kp BSPC       &sl 2        &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
+                        >; 
                 };
                 numpad_layer {
                         bindings = <
@@ -115,9 +120,9 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp DLLR      &kp HASH       &kp AT        &kp EXCL     &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &sk LSHFT     &trans         &trans        &trans       &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
+   &trans    &trans        &trans         &trans        &trans       &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &kp LGUI     &sk ESC           &kp BSPC       &kp N0       &trans      
+                                          &trans        &kp LSHFT    &sk ESC           &kp BSPC       &kp N0       &trans      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
