@@ -124,7 +124,7 @@
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &trans          &bt BT_SEL 1   &kp SEMI     &kp COLON      &kp STAR      &kp DEL        &trans
+   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &kp SEMI     &kp COLON      &kp STAR      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp PRCNT    &kp CARET      &kp AMPS      &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
