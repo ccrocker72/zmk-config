@@ -11,15 +11,14 @@
 
 / {
     behaviors {
-        pht: positional_hold_tap {
+        tt: tip_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
+            label = "TIP_TAP";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&sl>, <&sk>;
-            hold-trigger-key-positions = <6 14 15 17 26 27 28 29>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&sk>;
         };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -163,7 +162,7 @@
         combo_under {
             timeout-ms = <50>;
             key-positions = <40 32>;
-            bindings = <&kp N4>;
+            bindings = <&kp UNDER>;
         };
         combo_equal {
             timeout-ms = <50>;
@@ -187,7 +186,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans     &pht 1 LCTRL   &kp SPACE           &kp BSPC       &td1         &trans 
+                                          &trans     &tt 1 LCTRL   &kp SPACE           &kp BSPC       &td1         &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
