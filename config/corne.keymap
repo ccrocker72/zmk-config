@@ -21,25 +21,11 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&sk>;
+            bindings = <&sl>, <&sk>;
         };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp LCTRL>, <&sl 1>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp RSHFT>, <&sl 2>;
-        };
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp LCTRL>, <&kp LALT>;
@@ -47,41 +33,6 @@
     };
     combos {
         compatible = "zmk,combos";
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp TAB>;
-        };
-        combo_grave {
-            timeout-ms = <50>;
-            key-positions = <37 1>;
-            bindings = <&kp GRAVE>;
-        };
-        combo_tilde {
-            timeout-ms = <50>;
-            key-positions = <37 2>;
-            bindings = <&kp TILDE>;
-        };        
-        combo_dollar {
-            timeout-ms = <50>;
-            key-positions = <37 13>;
-            bindings = <&kp DLLR>;
-        };
-        combo_hash {
-            timeout-ms = <50>;
-            key-positions = <37 14>;
-            bindings = <&kp HASH>;
-        };
-        combo_at {
-            timeout-ms = <50>;
-            key-positions = <37 15>;
-            bindings = <&kp AT>;
-        };
-        combo_exclm {
-            timeout-ms = <50>;
-            key-positions = <37 16>;
-            bindings = <&kp EXCL>;
-        };
         combo_lbrc {
             timeout-ms = <50>;
             key-positions = <13 14>;
@@ -134,38 +85,23 @@
         };
         combo_one {
             timeout-ms = <50>;
-            key-positions = <37 28>;
+            key-positions = <37 16>;
             bindings = <&kp N1>;
         };
         combo_two {
             timeout-ms = <50>;
-            key-positions = <37 27>;
+            key-positions = <37 15>;
             bindings = <&kp N2>;
         };
         combo_three {
             timeout-ms = <50>;
-            key-positions = <37 26>;
+            key-positions = <37 14>;
             bindings = <&kp N3>;
         };
         combo_four {
             timeout-ms = <50>;
-            key-positions = <37 25>;
+            key-positions = <37 13>;
             bindings = <&kp N4>;
-        };
-        combo_minus {
-            timeout-ms = <50>;
-            key-positions = <40 31>;
-            bindings = <&kp MINUS>;
-        };
-        combo_under {
-            timeout-ms = <50>;
-            key-positions = <40 32>;
-            bindings = <&kp UNDER>;
-        };
-        combo_equal {
-            timeout-ms = <50>;
-            key-positions = <40 33>;
-            bindings = <&kp EQUAL>;
         };
         combo_gui {
             timeout-ms = <50>;
@@ -191,26 +127,26 @@
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &trans        &trans         &trans        &trans       &trans            &trans         &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
+   &trans    &kp GRAVE     &kp TILDE      &trans        &trans       &trans            &trans         &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans        &kp BSLH      &kp PIPE       &trans       &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
+   &trans    &kp DLLR      &kp HASH       &kp AT        &kp EXCL     &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &sk LSHFT     &trans         &trans        &trans       &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &sk LALT     &sk LGUI          &kp BSPC       &kp N0       &trans      
+                                          &trans        &sk LSHFT    &trans            &kp BSPC       &kp N0       &trans      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &kp SEMI     &kp COLON      &kp BSPC      &kp DEL        &trans
+   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &trans       &trans         &kp BSPC      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp MINUS    &kp UNDER      &kp EQUAL     &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &trans       &trans         &trans        &trans         &trans
+   &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp SEMI     &kp COLON      &kp BSLH      &kp PIPE       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &td3         &kp LSHFT         &to 3        &sk RSHFT    &trans
+                                         &trans        &td3         &kp LSHFT         &to 3         &sk RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
