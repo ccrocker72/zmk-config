@@ -103,7 +103,7 @@
         combo_enter {
             timeout-ms = <50>;
             key-positions = <19 20 21>;
-            bindings = <&kp RBRC>;
+            bindings = <&kp ENTER>;
         };
         combo_rbkt {
             timeout-ms = <50>;
