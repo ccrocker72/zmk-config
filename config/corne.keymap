@@ -11,6 +11,16 @@
 
 / {
     behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&sl>;
+            hold-trigger-key-positions = <6, 14, 15, 17, 26, 27, 28, 29>;
+        };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -40,6 +50,16 @@
             key-positions = <1 2>;
             bindings = <&kp TAB>;
         };
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <37 1>;
+            bindings = <&kp GRAVE>;
+        };
+        combo_tilde {
+            timeout-ms = <50>;
+            key-positions = <37 2>;
+            bindings = <&kp TILDE>;
+        };        
         combo_dollar {
             timeout-ms = <50>;
             key-positions = <37 13>;
@@ -80,6 +100,11 @@
             key-positions = <19 20>;
             bindings = <&kp RPAR>;
         };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <19 20 21>;
+            bindings = <&kp RBRC>;
+        };
         combo_rbkt {
             timeout-ms = <50>;
             key-positions = <20 21>;
@@ -110,6 +135,41 @@
             key-positions = <40 22>;
             bindings = <&kp STAR>;
         };
+        combo_one {
+            timeout-ms = <50>;
+            key-positions = <37 28>;
+            bindings = <&kp N1>;
+        };
+        combo_two {
+            timeout-ms = <50>;
+            key-positions = <37 27>;
+            bindings = <&kp N2>;
+        };
+        combo_three {
+            timeout-ms = <50>;
+            key-positions = <37 26>;
+            bindings = <&kp N3>;
+        };
+        combo_four {
+            timeout-ms = <50>;
+            key-positions = <37 25>;
+            bindings = <&kp N4>;
+        };
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <40 31>;
+            bindings = <&kp MINUS>;
+        };
+        combo_under {
+            timeout-ms = <50>;
+            key-positions = <40 32>;
+            bindings = <&kp N4>;
+        };
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <40 33>;
+            bindings = <&kp EQUAL>;
+        };
         combo_gui {
             timeout-ms = <50>;
             key-positions = <37 40>;
@@ -127,16 +187,16 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &td0       &kp SPACE           &kp BSPC       &td1         &trans 
+                                          &trans     &pht 1 LCTRL   &kp SPACE           &kp BSPC       &td1         &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &trans        &trans         &trans        &trans       &trans            &kp LC(Y)      &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
+   &trans    &trans        &trans         &trans        &trans       &trans            &trans         &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans        &kp BSLH      &kp PIPE     &kp GRAVE      &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
+   &trans    &trans        &kp BSLH      &kp PIPE       &trans       &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &sk LSHFT     &trans         &trans        &trans       &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
@@ -151,7 +211,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &trans         &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp UNDER    &kp MINUS      &kp EQUAL     &kp ENTER      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &trans       &trans         &trans        &kp QMARK      &trans
+   &trans    &sk LSHFT      &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &trans       &trans         &trans        &trans         &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &trans        &td3         &sk LSHFT         &to 3        &sk RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
