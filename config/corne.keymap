@@ -8,6 +8,9 @@
 &lt {
     tapping-term-ms = <300>;
 };
+&sk {
+    quick-release;
+};
 
 / {
     behaviors {
