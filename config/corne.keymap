@@ -27,14 +27,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <100>;
             bindings = <&tt 1 LCTRL>, <&sk LCTRL>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <100>;
             bindings = <&tt 2 RSHFT>, <&sk RSHFT>;
         };
     };
