@@ -103,6 +103,11 @@
             key-positions = <37 13>;
             bindings = <&kp N4>;
         };
+        combo_alt {
+            timeout-ms = <50>;
+            key-positions = <38 39>;
+            bindings = <&sk LALT>;
+        };
         combo_gui {
             timeout-ms = <50>;
             key-positions = <37 40>;
