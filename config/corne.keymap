@@ -105,7 +105,7 @@
         };
         combo_alt {
             timeout-ms = <50>;
-            key-positions = <38 39>;
+            key-positions = <38 40>;
             bindings = <&sk LALT>;
         };
         combo_gui {
