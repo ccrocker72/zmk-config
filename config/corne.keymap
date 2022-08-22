@@ -27,15 +27,22 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&tt 1 LCTRL>, <&sk LALT>;
+            tapping-term-ms = <150>;
+            bindings = <&tt 1 LCTRL>, <&sk LCTRL>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             bindings = <&tt 2 RSHFT>, <&sk RSHFT>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&sk LALT>, <&sk LGUI>;
         };
     };
     combos {
@@ -110,10 +117,10 @@
             key-positions = <37 13>;
             bindings = <&kp DLLR>;
         };
-        combo_gui {
+        combo_altgui {
             timeout-ms = <50>;
             key-positions = <14 15 16>;
-            bindings = <&kp LGUI>;
+            bindings = <&td2>;
         };
     };
         keymap {
@@ -153,7 +160,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp SEMI     &kp COLON      &kp BSLH      &kp PIPE       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &td0         &kp LSHFT         &to 3        &sk RGUI    &trans
+                                          &trans        &trans       &kp LSHFT         &to 3        &trans       &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
