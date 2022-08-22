@@ -115,7 +115,7 @@
             key-positions = <14 15 16>;
             bindings = <&sk LALT>;
         };
-        combo_alt {
+        combo_gui {
             timeout-ms = <50>;
             key-positions = <37 40>;
             bindings = <&sk LGUI>;
