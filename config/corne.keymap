@@ -23,97 +23,73 @@
             flavor = "tap-preferred";
             bindings = <&sl>, <&sk>;
         };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&tt 1 LCTRL>, <&sk LCTRL>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&tt 2 RSHFT>, <&sk RSHFT>;
-        };
     };
     combos {
         compatible = "zmk,combos";
-        combo_lbrc {
+        combo_enter {
             timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&kp LBRC>;
+            key-positions = <16 19>;
+            bindings = <&sk ENTER>;
         };
-        combo_lbkt {
+        combo_tab {
             timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp LBKT>;
+            key-positions = <15 20>;
+            bindings = <&sk TAB>;
         };
-        combo_lpar {
+        combo_redo {
             timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp LPAR>;
+            key-positions = <6 37>;
+            bindings = <&kp LC(F)>;
         };
-        combo_rpar {
+        combo_all {
             timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&kp RPAR>;
+            key-positions = <13 40>;
+            bindings = <&kp LC(A)>;
         };
-        combo_rbkt {
+        combo_save {
             timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp RBKT>;
+            key-positions = <14 40>;
+            bindings = <&kp LC(S)>;
         };
-        combo_rbrc {
+        combo_find {
             timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&kp RBRC>;
+            key-positions = <16 40>;
+            bindings = <&kp LC(F)>;
         };
-        combo_percent {
+        combo_undo {
             timeout-ms = <50>;
-            key-positions = <40 19>;
-            bindings = <&kp PRCNT>;
+            key-positions = <25 40>;
+            bindings = <&kp LC(Z)>;
         };
-        combo_caret {
+        combo_cut {
             timeout-ms = <50>;
-            key-positions = <40 20>;
-            bindings = <&kp CARET>;
+            key-positions = <26 40>;
+            bindings = <&kp LC(X)>;
         };
-        combo_ampersand {
+        combo_copy {
             timeout-ms = <50>;
-            key-positions = <40 21>;
-            bindings = <&kp AMPS>;
+            key-positions = <27 40>;
+            bindings = <&kp LC(C)>;
         };
-        combo_star {
+        combo_paste {
             timeout-ms = <50>;
-            key-positions = <40 22>;
-            bindings = <&kp STAR>;
+            key-positions = <28 40>;
+            bindings = <&kp LC(V)>;
         };
-        combo_excl {
+        combo_colon {
             timeout-ms = <50>;
-            key-positions = <37 16>;
-            bindings = <&kp EXCL>;
+            key-positions = <28 31>;
+            bindings = <&kp COLON>;
         };
-        combo_at {
+        combo_semi {
             timeout-ms = <50>;
-            key-positions = <37 15>;
-            bindings = <&kp AT>;
+            key-positions = <27 32>;
+            bindings = <&kp SEMI>;
         };
-        combo_hash {
+        combo_shift_gui {
             timeout-ms = <50>;
-            key-positions = <37 14>;
-            bindings = <&kp HASH>;
-        };
-        combo_dllr {
-            timeout-ms = <50>;
-            key-positions = <37 13>;
-            bindings = <&kp DLLR>;
-        };
-        combo_alt {
-            timeout-ms = <50>;
-            key-positions = <14 15 16>;
-            bindings = <&sk LALT>;
+            key-positions = <38 39>;
+            bindings = <&sk LS(LGUI)>;
         };
         combo_gui {
             timeout-ms = <50>;
@@ -132,33 +108,33 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &td0       &kp SPACE           &kp BSPC       &td1         &trans 
+                                          &trans        &sl 1       &kp SPACE          &kp BSPC       &sl 2         &trans 
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp GRAVE     &kp TILDE      &trans        &trans       &trans            &trans         &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
+   &trans    &kp GRAVE     &kp TILDE      &none         &none        &none             &none          &kp N7       &kp N8         &kp N9        &kp MINUS      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp N4        &kp N3         &kp N2        &kp N1       &trans            &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
+   &trans    &kp DLLR      &kp HASH       &kp AT        &kp EXCL     &none             &kp FSLH       &kp N4       &kp N5         &kp N6        &kp PLUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &sk LSHFT     &trans         &trans        &trans       &trans            &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
+   &trans    &none         &kp LBRC       &kp LBKT      &kp LPAR     &none             &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &trans       &trans            &kp BSPC       &kp N0       &trans      
+                                          &trans        &sk LALT     &trans            &kp BSPC       &kp N0       &trans      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
                 nav_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &trans       &trans         &kp BSPC      &kp DEL        &trans
+   &trans    &kp TAB        &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP &bt BT_CLR      &bt BT_SEL 1   &kp MINUS    &kp UNDER      &kp BSLH      &kp DEL        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp ESC        &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp MINUS    &kp UNDER      &kp EQUAL     &kp ENTER      &trans
+   &trans    &kp ESC        &kp HOME      &kp UP        &kp END      &kp PG_UP       &bt BT_SEL 2   &kp PRCNT    &kp CARET      &kp AMPS      &kp STAR       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp SEMI     &kp COLON      &kp BSLH      &kp PIPE       &trans
+   &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp RPAR     &kp RBKT       &kp RBRC      &kp PIPE       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &kp LALT     &kp LSHFT         &to 3        &trans       &trans
+                                          &trans        &sk LSHFT    &sk LALT          &to 3        &sk RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
