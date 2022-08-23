@@ -29,12 +29,12 @@
         combo_enter {
             timeout-ms = <50>;
             key-positions = <16 19>;
-            bindings = <&sk ENTER>;
+            bindings = <&kp ENTER>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <15 20>;
-            bindings = <&sk TAB>;
+            bindings = <&kp TAB>;
         };
         combo_redo {
             timeout-ms = <50>;
@@ -89,12 +89,12 @@
         combo_shift_gui {
             timeout-ms = <50>;
             key-positions = <38 39>;
-            bindings = <&sk LS(LGUI)>;
+            bindings = <&kp LS(LGUI)>;
         };
         combo_gui {
             timeout-ms = <50>;
             key-positions = <37 40>;
-            bindings = <&sk LGUI>;
+            bindings = <&kp LGUI>;
         };
     };
         keymap {
