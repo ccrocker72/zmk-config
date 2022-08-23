@@ -43,37 +43,37 @@
         };
         combo_all {
             timeout-ms = <50>;
-            key-positions = <13 40>;
+            key-positions = <13 37>;
             bindings = <&kp LC(A)>;
         };
         combo_save {
             timeout-ms = <50>;
-            key-positions = <14 40>;
+            key-positions = <14 37>;
             bindings = <&kp LC(S)>;
         };
         combo_find {
             timeout-ms = <50>;
-            key-positions = <16 40>;
+            key-positions = <16 37>;
             bindings = <&kp LC(F)>;
         };
         combo_undo {
             timeout-ms = <50>;
-            key-positions = <25 40>;
+            key-positions = <25 37>;
             bindings = <&kp LC(Z)>;
         };
         combo_cut {
             timeout-ms = <50>;
-            key-positions = <26 40>;
+            key-positions = <26 37>;
             bindings = <&kp LC(X)>;
         };
         combo_copy {
             timeout-ms = <50>;
-            key-positions = <27 40>;
+            key-positions = <27 37>;
             bindings = <&kp LC(C)>;
         };
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <28 40>;
+            key-positions = <28 37>;
             bindings = <&kp LC(V)>;
         };
         combo_colon {
@@ -121,7 +121,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &sk LSHFT     &kp LBRC       &kp LBKT      &kp LPAR     &none             &kp DOT        &kp N1       &kp N2         &kp N3        &kp EQUAL      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &sk LALT     &trans            &kp BSPC       &kp N0       &trans      
+                                          &trans        &sk LALT     &sk LCTRL         &kp BSPC       &kp N0       &trans      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -134,7 +134,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &trans         &kp LEFT      &kp DOWN      &kp RIGHT    &kp PG_DN       &bt BT_SEL 3   &kp RPAR     &kp RBKT       &kp RBRC      &kp PIPE       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &trans        &sk LSHFT    &sk LALT          &to 3        &sk RSHFT    &trans
+                                          &trans        &sk LCTRL    &sk LSHFT         &to 3        &sk RSHFT    &trans
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
