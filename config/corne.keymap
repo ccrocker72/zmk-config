@@ -3,22 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    behaviors {
-        layswap: layer_swap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_SWAP";
-            #binding-cells = <40>;
-            tapping-term-ms = <125>;
-            bindings = <&kp RSHFT>, <&mo 1>;
-        };
-        ctrlalt: ctrl_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_ALT";
-            #binding-cells = <37>;
-            tapping-term-ms = <125>;
-            bindings = <&kp LCTRL>, <&kp LALT>;
-        };
-    };
     combos {
         compatible = "zmk,combos";
         combo_enter {
@@ -48,7 +32,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT      &ctrlalt     &kp SPACE         &kp BSPC       &layswap     &mo 1
+                                          &sk LALT     &kp LCTRL     &kp SPACE         &kp BSPC       &kp RSHFT    &mo 1
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
