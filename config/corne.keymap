@@ -17,6 +17,7 @@
         ls: layer_swap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_SWAP";
+            #binding-cells = <40>;
             tapping-term-ms = <125>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
@@ -25,6 +26,7 @@
         ca: ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_ALT";
+            #binding-cells = <37>;
             tapping-term-ms = <125>;
             bindings = <&kp LCTRL>, <&kp LALT>;
         };
