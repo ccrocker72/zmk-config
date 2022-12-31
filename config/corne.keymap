@@ -8,14 +8,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LAYER_SWAP";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp RSHFT>, <&mo 1>;
         };
         td_ca: tap_dance_ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CTRL_ALT";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp LALT>;
         };
     };
