@@ -21,14 +21,14 @@
             tapping-term-ms = <125>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp RSHFT>, <&mo 1>;
+            bindings = <&kp RSHFT, &mo 1>;
         };
         ca: ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_ALT";
             #binding-cells = <37>;
             tapping-term-ms = <125>;
-            bindings = <&kp LCTRL>, <&kp LALT>;
+            bindings = <&kp LCTRL, &kp LALT>;
         };
     };
     combos {
