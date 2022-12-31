@@ -4,12 +4,19 @@
 
 / {
     behaviors {
-        td_ls: tap_dance_layer_swao {
+        td_ls: tap_dance_layer_swap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LAYER_SWAP";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp RSHFT>, <&mo 1>;
+        };
+        td_ca: tap_dance_ctrl_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CTRL_ALT";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp LCTRL>, <&kp LALT>;
         };
     };
     combos {
@@ -41,7 +48,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT     &kp LCTRL     &kp SPACE         &kp BSPC       &td_ls    &mo 1
+                                          &sk LALT     &td_ca       &kp SPACE         &kp BSPC       &td_ls        &mo 1
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
