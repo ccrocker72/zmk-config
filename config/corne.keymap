@@ -9,8 +9,6 @@
             label = "LAYER_SWAP";
             #binding-cells = <40>;
             tapping-term-ms = <125>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
             bindings = <&kp RSHFT>, <&mo 1>;
         };
         ca: ctrl_alt {
