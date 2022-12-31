@@ -14,21 +14,19 @@
 
 / {
     behaviors {
-        tt: tip_tap {
+        ls: layer_swap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TIP_TAP";
-            #binding-cells = <2>;
+            label = "LAYER_SWAP";
             tapping-term-ms = <125>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&sl>, <&sk>;
+            bindings = <&kp RSHFT>, <&mo 1>;
         };
-        td0: tap_dance_0 {
+        ca: ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp R>, <&kp T>;
+            label = "CTRL_ALT";
+            tapping-term-ms = <125>;
+            bindings = <&kp LCTRL>, <&kp LALT>;
         };
     };
     combos {
@@ -65,7 +63,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT      &sk LCTRL    &kp SPACE         &kp BSPC       &sk RSHFT    &to 1 
+                                          &sk LALT      &kp LCTRL    &kp SPACE         &kp BSPC       &ls          &mo 1
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
@@ -74,11 +72,11 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp N1        &kp N2         &kp N3       &kp N4        &kp N5            &kp N6         &kp N7       &kp N8       &kp N9        &kp N0           &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp ESC       &kp SEMI       &kp DEL      &kp GRAVE     &kp BSLH          &kp PG_UP      &kp HOME     &kp UP       &kp END        &kp MINUS       &trans
+   &trans    &kp ESC       &kp SEMI       &kp DEL      &kp GRAVE     &kp BSLH          &kp PG_UP   &kp C_VOL_UP    &kp UP      &kp C_VOL_UP   &kp MINUS       &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &none         &none          &kp LBKT     &kp RBKT      &none             &kp PG_DN      &kp LEFT     &kp DOWN     &kp RIGHT      &kp EQUAL       &trans
+   &trans    &none         &kp DEL        &kp LBKT     &kp RBKT      &kp BSPC          &kp PG_DN      &kp LEFT     &kp DOWN     &kp RIGHT     &kp EQUAL       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &none        &trans        &trans            &trans         &trans       &to 0      
+                                          &none        &kp LSHFT     &trans            &trans         &none        &to 0      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -91,9 +89,10 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z         &kp A         &kp S         &kp D        &kp F               &none        &kp LEFT    &kp C_VOL_DN    &kp RIGHT     &none            &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &mt B C       &mt LALT V   &kp SPACE           &kp BSPC      &to 0       &trans 
+                                         &mt B C       &mt LALT V   &kp SPACE           &kp BSPC      &trans     &to 0
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
         };
 };
+9
