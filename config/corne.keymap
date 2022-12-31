@@ -4,14 +4,14 @@
 
 / {
     behaviors {
-        ls: layer_swap {
+        layswap: layer_swap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_SWAP";
             #binding-cells = <40>;
             tapping-term-ms = <125>;
             bindings = <&kp RSHFT>, <&mo 1>;
         };
-        ca: ctrl_alt {
+        ctrlalt: ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_ALT";
             #binding-cells = <37>;
@@ -48,7 +48,7 @@
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT      &ca        &kp SPACE           &kp BSPC       &ls          &mo 1
+                                          &sk LALT      &ctrlalt     &kp SPACE         &kp BSPC       &layswap     &mo 1
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
