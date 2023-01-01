@@ -1,7 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+&mt {
+    tapping-term-ms = <300>;
+};
 / {
     behaviors {
         td_ls: tap_dance_layer_swap {
@@ -51,11 +53,11 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp Q          &kp W         &kp E         &kp R        &kp T             &kp Y          &kp U        &kp I          &kp O         &kp P          &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp A          &kp S         &td_dd        &kp F        &kp G             &kp H          &kp J        &kp K          &kp L         &kp SQT        &trans
+   &trans    &kp A          &kp S         &kp D         &kp F        &kp G             &kp H          &kp J        &kp K          &kp L         &kp SQT        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp Z          &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT       &kp FSLH       &trans
+   &trans &mt LSHFT Z       &kp X         &kp C         &kp V        &kp B             &kp N          &kp M        &kp COMMA      &kp DOT   &mt RSHFT FSLH     &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &sk LALT     &td_ca       &kp SPACE         &kp BSPC       &td_ls        &mo 1
+                                          &sk LALT     &kp LCTRL     &kp SPACE         &kp BSPC       &mo 1        &kp RSHFT
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >; 
                 };
