@@ -62,11 +62,11 @@
                 numpad_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp ESC      &kp F2        &none         &kp LA(F4)     &none             &kp BSLH      &kp N7        &kp N8       &kp N9        &kp MINUS   &trans
+   &trans    &kp EXCL     &kp AT        &kp HASH      &kp DLLR       &kp GRAVE         &kp BSLH      &kp N7        &kp N8       &kp N9        &kp MINUS   &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LC(A)    &kp LC(S)     &kp DEL       &kp LC(F)      &none             &none         &kp N4        &kp N5       &kp N6        &kp PLUS    &trans
+   &trans    &kp PRCNT    &kp CARET     &kp AMPS      &kp STAR       &kp TILDE         &kp STAR      &kp N4        &kp N5       &kp N6        &kp PLUS    &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp LC(Z)    &kp LC(X)     &kp LC(C)     &kp LC(V)      &none             &kp PLUS      &kp N1        &kp N2       &kp N3        &kp ENTER   &trans
+   &trans    &kp LC(Z)    &kp LC(X)     &kp LC(C)     &kp LC(V)      &none             &kp PLUS      &kp N1        &kp N2       &kp N3        &kp EQUAL   &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                           &none        &none         &trans            &trans        &kp N0        &kp DOT      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -75,11 +75,11 @@
                 nav_symbol_layer {
                         bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &trans    &kp GRAVE    &kp PIPE       &none        &none          &none            &none          &kp COLON    &kp UNDER    &kp MINUS    &kp EQUAL     &trans
+   &trans    &kp ESC      &kp F2      &kp C_VOL_DN    &kp LA(F4)  &kp C_VOL_UP        &none          &kp COLON    &kp UNDER    &kp MINUS    &kp EQUAL     &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp DLLR     &kp HASH       &kp AT       &kp EXCL     &kp C_VOL_UP       &kp PG_UP      &td_lpar     &kp UP       &td_rpar     &kp SEMI      &trans
+   &trans    &kp LC(A)    &kp LC(S)     &kp DEL       &kp LC(F)      &td_lpar         &kp PG_UP      &kp HOME     &kp UP       &kp END      &kp SEMI      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp STAR     &kp AMPS       &kp CARET    &kp PRCNT    &kp C_VOL_DN       &kp PG_DN      &kp LEFT     &kp DOWN     &kp RIGHT    &kp LC(FSLH)  &trans
+   &trans    &kp LC(Z)    &kp LC(X)     &kp LC(C)     &kp LC(V)      &td_rpar         &kp PG_DN      &kp LEFT     &kp DOWN     &kp RIGHT    &kp LC(FSLH)  &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                          &kp LCTRL    &kp LSHFT      &trans           &trans         &none        &none      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
