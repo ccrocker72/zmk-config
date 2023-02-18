@@ -77,11 +77,11 @@
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &trans    &kp EXCL     &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp STAR     &kp MINUS     &kp EQUAL     &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp none     &kp none      &kp none      &kp none      &kp none          &kp PG_UP     &kp HOME      &kp UP        &kp END      &kp SEMI      &trans
+   &trans    &none        &none         &none         &none         &none             &kp PG_UP     &kp HOME      &kp UP        &kp END      &kp SEMI      &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &trans    &kp none    &bt BT_CLR    &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT    &kp FSLH      &trans
+   &trans    &none       &bt BT_CLR    &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0       &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT    &kp FSLH      &trans
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                         &kp none     &kp LSHFT      &trans           &trans         &none        &kp RALT      
+                                         &none        &kp LSHFT      &trans           &trans         &none        &kp RALT      
       //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
